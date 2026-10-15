@@ -1,17 +1,18 @@
 import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projects";
+import { getPrimaryColor } from "../utils/techColors";
 import "./ProjectDetailPage.css";
 
 const ProjectDetailPage = () => {
-  const { projectId } = useParams(); //url dan waikitxavs projectId-s  routershi gviweria tu pathname iqneba  <Route path="/project/:projectId" element={<ProjectDetailPage /> } /> am project/projectId s kitxulobs useParam
-  const project = projects.find((p) => p.id === projectId); //projectshi vedzebt romeli objecti unda darenderdes, id s mixedvit, id unda daemtxvas url-shi coffee-shop an travel-planners 
+  const { projectId } = useParams();
+  const project = projects.find((p) => p.id === projectId);
 
   if (!project) {
     return (
       <div className="not-found">
-        <h2>Project Not Found</h2>
+        <h2>$ Error: project not found</h2>
         <Link to="/" className="back-link">
-          ← Back to Home
+          ← cd ~/
         </Link>
       </div>
     );
@@ -20,37 +21,52 @@ const ProjectDetailPage = () => {
   return (
     <div className="project-detail">
       <Link to="/" className="back-link">
-        ← Back to Projects
+        ← Back to projects
       </Link>
 
-      <div className="detail-header">
-        <h1>{project.title}</h1>
-        <div className="detail-links">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-github"
-          >
-            View on GitHub
-          </a>
-          {project.liveUrl && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-live"
-            >
-              Live Demo
-            </a>
-          )}
+      <div className="detail-terminal-header">
+        <div className="terminal-titlebar">
+          <span className="dot" style={{ background: "#ff5f56" }} />
+          <span className="dot" style={{ background: "#ffbd2e" }} />
+          <span className="dot" style={{ background: "#27c93f" }} />
+        </div>
+        <div className="detail-terminal-body">
+          <div className="prompt-line">
+            <span className="cmd">
+              $ cd ~/projects/{project.id} && cat readme.md
+            </span>
+          </div>
+
+          <div className="detail-header">
+            <h1>{project.title}</h1>
+            <div className="detail-links">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-github"
+              >
+                View Code
+              </a>
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-live"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="detail-content">
         <div className="detail-image">
           <img
-            src={project.image} // ← Use actual image path, NOT fallback
+            src={project.image}
             alt={project.title}
             onError={(e) => {
               e.target.src =
@@ -60,27 +76,31 @@ const ProjectDetailPage = () => {
         </div>
 
         <div className="detail-info">
-          <h2>About This Project</h2>
+          <h2>About</h2>
           <p className="project-long-description">{project.longDescription}</p>
 
-          <h3>Key Features</h3>
+          <h3>features</h3>
           <ul className="features-list">
             {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
           </ul>
 
-          <h3>Technologies Used</h3>
+          <h3>stack</h3>
           <div className="tech-stack">
             {project.technologies.map((tech) => (
-              <span key={tech} className="tech-item">
+              <span
+                key={tech}
+                className="tech-item"
+                style={{ color: getPrimaryColor([tech]) }}
+              >
                 {tech}
               </span>
             ))}
           </div>
 
           <p className="project-meta">
-            <strong>Last Updated:</strong> {project.lastUpdated}
+            git log --last-updated: {project.lastUpdated}
           </p>
         </div>
       </div>
