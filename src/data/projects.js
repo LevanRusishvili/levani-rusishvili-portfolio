@@ -1,5 +1,140 @@
 export const projects = [
   {
+    id: "notes-app",
+    title: "Notes App",
+    description:
+      "A full-stack note-taking app with tags, search, archiving, and custom themes, built with React, TypeScript, Node.js, and SQLite.",
+    longDescription:
+      "Notes App is a full-stack note-taking application based on the Frontend Mentor challenge. Users can create, edit, archive, and delete notes, organize them with tags, and search across titles, tags, and content. It supports selectable color and font themes, form validation, full keyboard navigation, and a responsive layout for every screen size. A Node.js and Express backend with SQLite stores the notes and handles user authentication.",
+    image: "/images/notes.jpg",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "SQLite",
+      "Tailwind CSS",
+      "React Router DOM",
+      "Vite",
+    ],
+    githubUrl: "https://github.com/LevanRusishvili/levani-rusishvili-notes-app", // ← your actual repo
+    liveUrl: "https://levani-rusishvili-notes-app.netlify.app/", // ← your actual URL
+    features: [
+      "Create, read, update, and delete notes",
+      "Archive notes and view all archived notes",
+      "Filter notes by tag with dedicated routes",
+      "Search by title, tag, and content",
+      "Color theme and font theme selection",
+      "Form validation with clear error messages",
+      "Full keyboard navigation with visible hover and focus states",
+      "Responsive layout for desktop, tablet, and mobile",
+      "User authentication with login and password change",
+      "Notes persisted in a SQLite database via a REST API",
+    ],
+    lastUpdated: "Oct 21, 2026",
+  },
+  {
+    id: "cinemanetwork",
+    title: "Kino XII Cinema Network",
+    description:
+      "A cinema ticket booking app: browse films, pick a session, choose seats and buy tickets.",
+    longDescription:
+      "Kino XII is a cinema network app where users browse films, filter sessions across four venues, pick seats on an API-driven hall map and buy tickets in a two-step booking flow with a timed seat hold. It includes JWT-style token authentication with automatic replay of the interrupted action after login, URL-synced filters, profile management with age-based restrictions, and ticket refunds. Built with React, TypeScript and TanStack Query against a REST API.",
+    image: "/images/cinemanetwork.jpg",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Axios",
+      "Zustand",
+      "TanStack Query",
+      "React Router DOM",
+      "React Hook Form",
+    ],
+    githubUrl: "https://github.com/LevanRusishvili/cinema-network",
+    liveUrl: "https://cinemanetwork.netlify.app/",
+    features: [
+      "Login and registration modals with blur validation and server error mapping",
+      "Protected actions resume automatically after login (401 request replay)",
+      "Animated hero slider, Now Playing, Coming Soon with Notify Me, Recently viewed",
+      "Sessions page with filters, sorting and pagination stored in the URL",
+      "Seat map rendered entirely from API data (sections, rows, aisles)",
+      "Two-step booking with 8-minute seat hold and server-based countdown",
+      "Seat conflict (409) handling that keeps the remaining selection",
+      "Profile with completeness status and age-based ticket restrictions",
+      "My Tickets with Upcoming/Past tabs and refunds",
+      "Header search with debounced typeahead",
+    ],
+    lastUpdated: "Oct 11, 2026",
+  },
+  {
+    id: "coupleverse",
+    title: "CoupleVerse",
+    description:
+      "A romantic couple's memory management app built with React, TypeScript, and Firebase.",
+    longDescription:
+      "CoupleVerse is a dedicated platform for couples to store and cherish their shared memories. Partners can upload photos, create memory entries, and build a beautiful digital timeline of their relationship. The app features Firebase authentication, real-time database synchronization, and Cloudinary integration for seamless photo uploads. Perfect for capturing and reliving special moments together.",
+    image: "/images/couples.webp",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Firebase",
+      "Vite",
+      "Cloudinary",
+      "React Router DOM",
+    ],
+    githubUrl:
+      "https://github.com/LevanRusishvili/levani-rusishvili-coupleverse-demo",
+    liveUrl: "https://coupleverse-demo.netlify.app/",
+    features: [
+      "Firebase Authentication (sign in as a couple)",
+      "Create, view, edit, and delete memory entries",
+      "Photo upload integration with Cloudinary",
+      "Real-time data sync with Firebase Realtime Database",
+      "Beautiful timeline view of all memories",
+      "Responsive design optimized for mobile and desktop",
+      "Private - each couple sees only their own data",
+    ],
+    lastUpdated: "Jul 17, 2026",
+  },
+  {
+    id: "smartcourier",
+    title: "SmartCourier",
+    description:
+      "A complete delivery management platform with Admin, User, and Courier dashboards built with React, TypeScript, and Tailwind CSS.",
+    longDescription:
+      "SmartCourier is a full-stack delivery management system connecting customers, couriers, and administrators through three distinct dashboards. Users can browse available couriers, schedule deliveries, and track their requests in real-time. Couriers can manage their schedule, update delivery statuses, and view their earnings. Admins have full control over user management, courier approval, and system oversight. The application features JWT authentication, role-based access control, persistent storage with Zustand, and seamless API integration.",
+    image: "/images/smartCourier.avif",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Zustand",
+      "Axios",
+      "React Router DOM",
+    ],
+    githubUrl:
+      "https://github.com/LevanRusishvili/levani-rusishvili-smartcourier",
+    liveUrl: "https://smartcourierapp.netlify.app/",
+    features: [
+      "Three role-specific dashboards (Admin, User, Courier)",
+      "JWT authentication with persistent login (Zustand + localStorage)",
+      "Role-based access control (different views for each user type)",
+      "User can browse couriers and schedule deliveries with conflict detection",
+      "Courier can manage delivery requests and update status (pending/confirmed/completed/cancelled)",
+      "Admin can manage all users and couriers (view, edit, delete)",
+      "Working days configuration for couriers (minimum 5 days required)",
+      "Courier vehicle information tracking",
+      "Call logs history accessible by Admin",
+      "Profile editing for all user types",
+      "Responsive design with Tailwind CSS",
+      "Custom form components with validation",
+    ],
+    lastUpdated: "Apr 25, 2026",
+  },
+
+  {
     id: "coffee-shop",
     title: "Coffee Shop",
     description: "A modern coffee shop interface built with React and Vite.",
@@ -87,141 +222,5 @@ export const projects = [
       "Clean, minimal retro-inspired UI",
     ],
     lastUpdated: "Apr 14, 2026",
-  },
-
-  {
-    id: "smartcourier",
-    title: "SmartCourier",
-    description:
-      "A complete delivery management platform with Admin, User, and Courier dashboards built with React, TypeScript, and Tailwind CSS.",
-    longDescription:
-      "SmartCourier is a full-stack delivery management system connecting customers, couriers, and administrators through three distinct dashboards. Users can browse available couriers, schedule deliveries, and track their requests in real-time. Couriers can manage their schedule, update delivery statuses, and view their earnings. Admins have full control over user management, courier approval, and system oversight. The application features JWT authentication, role-based access control, persistent storage with Zustand, and seamless API integration.",
-    image: "/images/smartCourier.avif",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-      "Zustand",
-      "Axios",
-      "React Router DOM",
-    ],
-    githubUrl:
-      "https://github.com/LevanRusishvili/levani-rusishvili-smartcourier",
-    liveUrl: "https://smartcourierapp.netlify.app/",
-    features: [
-      "Three role-specific dashboards (Admin, User, Courier)",
-      "JWT authentication with persistent login (Zustand + localStorage)",
-      "Role-based access control (different views for each user type)",
-      "User can browse couriers and schedule deliveries with conflict detection",
-      "Courier can manage delivery requests and update status (pending/confirmed/completed/cancelled)",
-      "Admin can manage all users and couriers (view, edit, delete)",
-      "Working days configuration for couriers (minimum 5 days required)",
-      "Courier vehicle information tracking",
-      "Call logs history accessible by Admin",
-      "Profile editing for all user types",
-      "Responsive design with Tailwind CSS",
-      "Custom form components with validation",
-    ],
-    lastUpdated: "Apr 25, 2026",
-  },
-  {
-    id: "coupleverse",
-    title: "CoupleVerse",
-    description:
-      "A romantic couple's memory management app built with React, TypeScript, and Firebase.",
-    longDescription:
-      "CoupleVerse is a dedicated platform for couples to store and cherish their shared memories. Partners can upload photos, create memory entries, and build a beautiful digital timeline of their relationship. The app features Firebase authentication, real-time database synchronization, and Cloudinary integration for seamless photo uploads. Perfect for capturing and reliving special moments together.",
-    image: "/images/couples.webp",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Firebase",
-      "Vite",
-      "Cloudinary",
-      "React Router DOM",
-    ],
-    githubUrl:
-      "https://github.com/LevanRusishvili/levani-rusishvili-coupleverse-demo",
-    liveUrl: "https://coupleverse-demo.netlify.app/",
-    features: [
-      "Firebase Authentication (sign in as a couple)",
-      "Create, view, edit, and delete memory entries",
-      "Photo upload integration with Cloudinary",
-      "Real-time data sync with Firebase Realtime Database",
-      "Beautiful timeline view of all memories",
-      "Responsive design optimized for mobile and desktop",
-      "Private - each couple sees only their own data",
-    ],
-    lastUpdated: "Jul 17, 2026",
-  },
-
-  {
-    id: "cinemanetwork",
-    title: "Kino XII Cinema Network",
-    description:
-      "A cinema ticket booking app: browse films, pick a session, choose seats and buy tickets.",
-    longDescription:
-      "Kino XII is a cinema network app where users browse films, filter sessions across four venues, pick seats on an API-driven hall map and buy tickets in a two-step booking flow with a timed seat hold. It includes JWT-style token authentication with automatic replay of the interrupted action after login, URL-synced filters, profile management with age-based restrictions, and ticket refunds. Built with React, TypeScript and TanStack Query against a REST API.",
-    image: "/images/cinemanetwork.jpg",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-      "Axios",
-      "Zustand",
-      "TanStack Query",
-      "React Router DOM",
-      "React Hook Form",
-    ],
-    githubUrl: "https://github.com/LevanRusishvili/cinema-network",
-    liveUrl: "https://cinemanetwork.netlify.app/",
-    features: [
-      "Login and registration modals with blur validation and server error mapping",
-      "Protected actions resume automatically after login (401 request replay)",
-      "Animated hero slider, Now Playing, Coming Soon with Notify Me, Recently viewed",
-      "Sessions page with filters, sorting and pagination stored in the URL",
-      "Seat map rendered entirely from API data (sections, rows, aisles)",
-      "Two-step booking with 8-minute seat hold and server-based countdown",
-      "Seat conflict (409) handling that keeps the remaining selection",
-      "Profile with completeness status and age-based ticket restrictions",
-      "My Tickets with Upcoming/Past tabs and refunds",
-      "Header search with debounced typeahead",
-    ],
-    lastUpdated: "Oct 11, 2026",
-  },
-  {
-    id: "notes-app",
-    title: "Notes App",
-    description:
-      "A full-stack note-taking app with tags, search, archiving, and custom themes, built with React, TypeScript, Node.js, and SQLite.",
-    longDescription:
-      "Notes App is a full-stack note-taking application based on the Frontend Mentor challenge. Users can create, edit, archive, and delete notes, organize them with tags, and search across titles, tags, and content. It supports selectable color and font themes, form validation, full keyboard navigation, and a responsive layout for every screen size. A Node.js and Express backend with SQLite stores the notes and handles user authentication.",
-    image: "/images/notes.jpg",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "SQLite",
-      "Tailwind CSS",
-      "React Router DOM",
-      "Vite",
-    ],
-    githubUrl: "https://github.com/LevanRusishvili/levani-rusishvili-notes-app", // ← your actual repo
-    liveUrl: "https://levani-rusishvili-notes-app.netlify.app/", // ← your actual URL
-    features: [
-      "Create, read, update, and delete notes",
-      "Archive notes and view all archived notes",
-      "Filter notes by tag with dedicated routes",
-      "Search by title, tag, and content",
-      "Color theme and font theme selection",
-      "Form validation with clear error messages",
-      "Full keyboard navigation with visible hover and focus states",
-      "Responsive layout for desktop, tablet, and mobile",
-      "User authentication with login and password change",
-      "Notes persisted in a SQLite database via a REST API",
-    ],
-    lastUpdated: "Oct 21, 2026",
   },
 ];
