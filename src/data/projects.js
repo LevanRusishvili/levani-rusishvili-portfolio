@@ -191,4 +191,37 @@ export const projects = [
     ],
     lastUpdated: "Oct 11, 2026",
   },
+  {
+    id: "notes-app",
+    title: "Notes App",
+    description:
+      "A full-stack note-taking app with tags, search, archiving, and custom themes, built with React, TypeScript, Node.js, and SQLite.",
+    longDescription:
+      "Notes App is a full-stack note-taking application based on the Frontend Mentor challenge. Users can create, edit, archive, and delete notes, organize them with tags, and search across titles, tags, and content. It supports selectable color and font themes, form validation, full keyboard navigation, and a responsive layout for every screen size. A Node.js and Express backend with SQLite stores the notes and handles user authentication.",
+    image: "/images/notes.jpg",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "SQLite",
+      "Tailwind CSS",
+      "React Router DOM",
+      "Vite",
+    ],
+    githubUrl: "https://github.com/LevanRusishvili/levani-rusishvili-notes-app", // ← your actual repo
+    liveUrl: "https://levani-rusishvili-notes-app.netlify.app/", // ← your actual URL
+    features: [
+      "Create, read, update, and delete notes",
+      "Archive notes and view all archived notes",
+      "Filter notes by tag with dedicated routes",
+      "Search by title, tag, and content",
+      "Color theme and font theme selection",
+      "Form validation with clear error messages",
+      "Full keyboard navigation with visible hover and focus states",
+      "Responsive layout for desktop, tablet, and mobile",
+      "User authentication with login and password change",
+      "Notes persisted in a SQLite database via a REST API",
+    ],
+    lastUpdated: "Oct 21, 2026",
+  },
 ];
